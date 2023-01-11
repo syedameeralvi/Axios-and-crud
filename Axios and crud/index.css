@@ -1,0 +1,30 @@
+
+body{
+    
+    background-color: rgb(185, 185, 196);
+    background-image: url("image.jpg");
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+                     background-size: cover;
+}
+
+.details{
+    text-align: center;
+    background-color: rgb(217, 185, 125);
+    border-radius: 9px;
+    background: #f9f5f5;
+    /* box-shadow:  7px 7px 42px #d6d6d6,
+                 -7px -7px 42px #ffffff; */
+    
+        width: 500px;
+        height: 450px;
+    padding: 5px;
+ margin: auto;
+}
+
+.call{
+    height: 25px;
+    width: 500px;
+    color: rgb(21, 21, 21);
+    background-color: rgb(68, 255, 0);
+}

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./index.css">
+    <title>Registration Form</title>
+</head>
+<body>
+    <div class = "details">
+        <h1 style= "text-align: center"> Book a Call</h1>
+    <p style= "text-align: center"> Book a call slot and our representive will call you within 1hr of selected time</p>
+    <hr>
+    <form onsubmit= "saveToLocalStorage(event)">
+        <label for="name">Name:</label><br>
+        <input type="text" name="username" id="usernameInputTag" required><br>
+        <label for="email">Email:</label><br>
+        <input type="email" name="useremail" id="useremailInputTag" required><br>
+        <label for="phone">Number:</label><br>
+        <input type="tel" name="userphonenumber" id="userphonenumberInputTag"><br><br>
+        <label for="time">Time for Call:</label>
+        <input type="time"> 
+        <label for="date">Date for Call:</label>
+        <input type="date"> <br><br>
+<input class="btn" type="submit" value="Get a Call">
+    </form>
+    <ul id ='list of items'></ul>
+<script src="./index.js" ></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/axios/1.2.2/axios.min.js"></script>
+</div>
+</body>
+</html>
