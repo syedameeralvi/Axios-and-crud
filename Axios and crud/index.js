@@ -18,7 +18,7 @@ function saveToCrudStorage(event){
     axios
     .post(
       "https://crudcrud.com/api/20ae5e9e021d411dbe76d89c09faad02/AppointmentApp",
-      userDetails
+      obj
     )
     .then((response) => {
         showUserOnScreen(response.data);
@@ -36,6 +36,20 @@ window.addEventListener("DOMContentLoaded", () => {
     })
     .catch((err) => console.log(err));
 });
+
+function showUserOnScreen(user) {
+  document.getElementById("usernameInputTag").value = "";
+  document.getElementById("useremailInputTag").value = "";
+  document.getElementById("userphonenumberInputTag").value = "";
+
+  const d = document.getElementById("ul");
+  const li = `<li id="${user._id}"> ${user.name} - ${user.email} - ${user.userphoneumber} 
+    <button onclick = "editUser('${user.email}','${user.name}','${user.userphoneumber}','${user._id}')"> Edit </button> 
+    <button   onclick = "deleteUser('${user._id}')"> Delete </button> 
+     </li>`;
+
+  d.innerHTML = d.innerHTML + li;
+}
  
 function showUserOnScreen(obj){
     const parentElem = document.getElementById('list of items')
